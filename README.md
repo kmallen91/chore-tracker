@@ -1,4 +1,4 @@
-# BackEnd
+# Chore Tracker BackEnd
 
 ## [https://chore-tracker-bw.herokuapp.com/](https://chore-tracker-bw.herokuapp.com/)
 
