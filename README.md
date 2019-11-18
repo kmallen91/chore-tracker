@@ -57,7 +57,7 @@
      "id": 1,
     "name": "sweep",
     "due_date": "2019-11-21",
-    "completed": 0, (0 is false, 1 is true)
+    "completed": false, 
     "created_at": "2019-11-18 22:00:01"
 }
 ```
