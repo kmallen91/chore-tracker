@@ -2,7 +2,7 @@
 
 ## [https://chore-tracker-bw.herokuapp.com/](https://chore-tracker-bw.herokuapp.com/)
 
-#Endpoints
+# Endpoints
 
 ### POST /users/register
 
