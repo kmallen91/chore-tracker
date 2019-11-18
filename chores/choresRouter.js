@@ -23,9 +23,10 @@ router.post("/", (req, res) => {
 
 router.put("/", (req, res) => {
   const updatedChore = req.body;
+  chore = req.body.id;
   chores
     .update(updatedChore)
-    .then(chore => res.status(201).json({ data: chore }))
+    .then(chore => res.status(201).json({ updatedChore }))
     .catch(err => {
       console.log("error from chore put", err);
       res.status(500).json({ message: "error updating the chore" });
