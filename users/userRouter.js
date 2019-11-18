@@ -7,7 +7,7 @@ const users = require("../users/userModel");
 // const validateUser = require("../middleware/validateUser");
 
 router.post("/register", (req, res) => {
-  let user = req.body;
+  const user = req.body;
   const newUser = { ...user, password: bcrypt.hashSync(user.password) };
 
   users
@@ -19,7 +19,7 @@ router.post("/register", (req, res) => {
     })
     .catch(err => {
       console.log("from register", err);
-      res.status(500).json({ message: `error registering user` });
+      res.status(500).json({ message: `error registering user`, error: error });
     });
 });
 
@@ -34,12 +34,13 @@ router.get("/", (req, res) => {
 });
 
 router.post("/login", (req, res) => {
-  let { username, password } = req.body;
+  const { username, password } = req.body;
+
   users
     .findBy({ username })
     .first()
     .then(user => {
-      if (user && bcrypt.compareSync(password, user.username)) {
+      if (user && bcrypt.compareSync(password, user.password)) {
         const token = getJwtToken(user);
         res.status(200).json({
           message: `Welcome ${user.username}`,
