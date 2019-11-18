@@ -5,6 +5,7 @@ exports.up = function(knex) {
     table.date("due_date", 56);
     table.timestamp("created_at").defaultTo(knex.fn.now());
     table.boolean("completed").defaultTo(false);
+    table.integer("points");
   });
 };
 
