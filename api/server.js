@@ -12,7 +12,7 @@ server.use(helmet());
 server.use(express.json());
 server.use(cors());
 
-server.use("/api/users", userRouter);
+server.use("/users", userRouter);
 // server.use("api/chores", choresRouter);
 // server.use("api/children", childrenRouter);
 
