@@ -21,7 +21,7 @@ module.exports = {
   },
 
   testing: {
-    useNullAsDefault: SVGComponentTransferFunctionElement,
+    useNullAsDefault: true,
     client: "sqlite3",
     connection: "./data/test.db3",
     pool: {
