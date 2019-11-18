@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const secret = require("../config/secret");
 
 const users = require("../users/userModel");
-const validateUser = require("../middleware/validateUser");
+// const validateUser = require("../middleware/validateUser");
 
 router.post("/register", (req, res) => {
   let user = req.body;
