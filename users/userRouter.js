@@ -41,7 +41,12 @@ router.post("/login", (req, res) => {
     .then(user => {
       if (user && bcrypt.compareSync(password, user.username)) {
         const token = getJwtToken(user);
-        res.status(200).json({ message: `Welcome ${user.username}`, token });
+        res.status(200).json({
+          message: `Welcome ${user.username}`,
+          userId: user.id,
+          username: user.username,
+          token: token
+        });
       } else {
         res.status(401).json({ message: `Invalid credentials` });
       }
@@ -52,9 +57,10 @@ router.post("/login", (req, res) => {
     });
 });
 
-function getJwtToken(username) {
+function getJwtToken(user) {
   const payload = {
-    username
+    subject: user.id,
+    username: user.username
   };
 
   const options = {
