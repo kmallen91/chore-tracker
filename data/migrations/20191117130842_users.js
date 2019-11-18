@@ -10,6 +10,7 @@ exports.up = function(knex) {
     table.string("last_name", 128);
     table.string("email", 256).unique();
     table.string("family_password", 128);
+    table.string("role", 128);
   });
 };
 
