@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const secret = require("../config/secret");
 
 const users = require("../users/userModel");
 const validateUser = require("../middleware/validateUser");
@@ -56,12 +57,11 @@ function getJwtToken(username) {
     username
   };
 
-  const secret = process.env.JWT_SECRET || "give it your best guess";
   const options = {
     expiresIn: "1d"
   };
 
-  return jwt.sign(payload, secret, options);
+  return jwt.sign(payload, secret.jwtSecret, options);
 }
 
 module.exports = router;
