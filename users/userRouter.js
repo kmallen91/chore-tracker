@@ -22,6 +22,16 @@ router.post("/register", (req, res) => {
     });
 });
 
+router.get("/", (req, res) => {
+  users
+    .find()
+    .then(user => res.status(200).json(user))
+    .catch(err => {
+      console.log(`error from get`, err);
+      res.status(500).json({ message: `error getting users` });
+    });
+});
+
 router.post("/login", (req, res) => {
   let { username, password } = req.body;
   users
