@@ -235,7 +235,7 @@ id and created_at are generated on post
   "role": "child"
 }
 ```
-#### Not all fields are required in a POST request
+#### Not all fields are required in a PUT request
 
 ### /children/:id DELETE Request
 
