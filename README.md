@@ -127,3 +127,121 @@ id and created_at are generated on post
        "points": 10
 }
 ```
+
+## /children Endpoints
+
+### /children GET Request
+
+#### Returns
+```
+[
+  {
+    "child_id": 3,
+    "parent_id": 1,
+    "chore_id": 1,
+    "child_username": "testchild5",
+    "child_password": null,
+    "messages": "tester",
+    "chore_streak": 0,
+    "chore_score": 10,
+    "bonus_points": null,
+    "role": "child"
+  },
+  {
+    "child_id": 2,
+    "parent_id": 1,
+    "chore_id": 1,
+    "child_username": "Billy",
+    "child_password": null,
+    "messages": "keep up the good work",
+    "chore_streak": 5,
+    "chore_score": 20,
+    "bonus_points": null,
+    "role": "child"
+  },
+  {
+    "child_id": 1,
+    "parent_id": 1,
+    "chore_id": 1,
+    "child_username": "Joey",
+    "child_password": null,
+    "messages": "Do your chores!",
+    "chore_streak": 0,
+    "chore_score": 10,
+    "bonus_points": null,
+    "role": "child"
+  }
+]
+```
+
+### /children POST Request
+
+#### Expects
+```
+{
+	"parent_id": 1,
+	"chore_id":1,
+	"child_username": "testchild5",
+	"messages": "tester",
+	"chore_score": 10,
+	"chore_streak": 0,
+	"role":"child"
+}
+```
+#### Note you cannot add a child with a parent_id or chore_id that do not exist
+
+#### Returns
+```
+[
+  {
+    "child_id": 3,
+    "parent_id": 1,
+    "chore_id": 1,
+    "child_username": "testchild5",
+    "child_password": null,
+    "messages": "tester",
+    "chore_streak": 0,
+    "chore_score": 10,
+    "bonus_points": null,
+    "role": "child"
+  }
+]
+```
+
+### /children PUT Request
+
+#### Expects
+```
+{
+	"parent_id": 1,
+	"chore_id":1,
+	"child_username": "testchild1",
+	"messages": "Do your chores!",
+	"chore_score": 20,
+	"chore_streak": 5,
+	"role":"child"
+}
+```
+
+#### Returns
+```
+{
+  "parent_id": 1,
+  "chore_id": 1,
+  "child_username": "testchild1",
+  "messages": "Do your chores!",
+  "chore_score": 20,
+  "chore_streak": 5,
+  "role": "child"
+}
+```
+#### Not all fields are required in a POST request
+
+### /children/:id DELETE Request
+
+#### Returns
+```
+{
+	deleted: 2
+}
+```
