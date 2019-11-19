@@ -52,7 +52,7 @@ router.delete("/:id", (req, res) => {
 
   children
     .deleteChild(childId)
-    .then(child => res.status(200).json(child))
+    .then(child => res.status(200).json({ deleted: child }))
     .catch(err => {
       console.log("error from child DELETE", err);
       res.status(500).json({ message: "error deleting child" });
