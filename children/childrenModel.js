@@ -12,50 +12,49 @@ function findChildren() {
   return db("children")
     .join("users", "children.parent_id", "users.id")
     .select(
-      "id",
-      "parent_id",
-      "chore_id",
-      "child_username",
-      "child_password",
-      "messages",
-      "chore_streak",
-      "chore_score",
-      "bonus_points",
-      "role"
+      "children.child_id",
+      "children.parent_id",
+      "children.chore_id",
+      "children.child_username",
+      "children.child_password",
+      "children.messages",
+      "children.chore_streak",
+      "children.chore_score",
+      "children.bonus_points",
+      "children.role"
     );
 }
 
-function findChildrenbyId(id) {
+function findChildrenbyId(child_id) {
   return db("children")
     .join("users", "children.parent_id", "users.id")
     .select(
-      "id",
-      "parent_id",
-      "chore_id",
-      "child_username",
-      "child_password",
-      "messages",
-      "chore_streak",
-      "chore_score",
-      "bonus_points",
-      "role"
+      "children.child_id",
+      "children.parent_id",
+      "children.chore_id",
+      "children.child_username",
+      "children.child_password",
+      "children.messages",
+      "children.chore_streak",
+      "children.chore_score",
+      "children.bonus_points",
+      "children.role"
     )
-    .where({ id });
+    .where({ child_id });
 }
 
 async function addChild(child) {
-  const [id] = await db("children").insert(child, "id");
+  const [id] = await db("children").insert(child, "child_id");
   return findChildrenbyId(id);
 }
 
 async function updateChild(child) {
-  await db("children")
-    .update(chore)
-    .where({ id: child.id });
+  await db("children").update(child);
+  // .where({ child_id: child.child_id });
 }
 
-async function deleteChild(child) {
-  await db("children")
-    .del(child)
-    .where({ id: child.id });
+function deleteChild(child) {
+  return db("children")
+    .del()
+    .where({ child_id: child });
 }

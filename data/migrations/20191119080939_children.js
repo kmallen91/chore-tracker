@@ -1,6 +1,6 @@
 exports.up = function(knex) {
   return knex.schema.createTable("children", table => {
-    table.increments();
+    table.increments("child_id");
     table
       .integer("parent_id", 128)
       .unsigned()
@@ -15,14 +15,9 @@ exports.up = function(knex) {
       .references("id")
       .inTable("chores")
       .onUpdate("CASCADE")
-      .onDelete("CASCADSE");
-    table.string("child_username", 256).notNullable();
-    table
-      .string("child_password", 256)
-      .references("family_password")
-      .inTable("users")
-      .onUpdate("CASCADE")
       .onDelete("CASCADE");
+    table.string("child_username", 256).notNullable();
+    table.string("child_password", 256);
     table.string("messages", 1024);
     table.integer("chore_score");
     table.integer("chore_streak");
