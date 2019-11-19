@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const userRouter = require("../users/userRouter");
 const choresRouter = require("../chores/choresRouter.js");
-// const childrenRouter = require("../children/childrenRouter.js");
+const childrenRouter = require("../children/childrenRouter.js");
 
 const server = express();
 
@@ -14,7 +14,7 @@ server.use(express.json());
 
 server.use("/users", userRouter);
 server.use("/chores", choresRouter);
-// server.use("api/children", childrenRouter);
+server.use("/children", childrenRouter);
 
 server.get("/", (req, res) => {
   res.send("Server running");

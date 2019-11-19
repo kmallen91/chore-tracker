@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   chores
     .addChore(req.body)
-    .then(chore => res.status(201).json({ chore }))
+    .then(chore => res.status(201).json(chore))
     .catch(err => {
       console.log("error from chore post", err);
       res.status(500).json({ message: "error adding chore" });
@@ -23,10 +23,10 @@ router.post("/", (req, res) => {
 
 router.put("/", (req, res) => {
   const updatedChore = req.body;
-  chore = req.body.id;
+
   chores
     .update(updatedChore)
-    .then(chore => res.status(201).json({ updatedChore }))
+    .then(chore => res.status(201).json(updatedChore))
     .catch(err => {
       console.log("error from chore put", err);
       res.status(500).json({ message: "error updating the chore" });
