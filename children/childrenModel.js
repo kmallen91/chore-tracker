@@ -14,7 +14,7 @@ function findChildren() {
     .select(
       "children.child_id",
       "children.parent_id",
-      "children.chores",
+      "children.chore_id",
       "children.child_username",
       "children.child_password",
       "children.messages",
@@ -31,7 +31,7 @@ function findChildrenbyId(child_id) {
     .select(
       "children.child_id",
       "children.parent_id",
-      "children.chores",
+      "children.chore_id",
       "children.child_username",
       "children.child_password",
       "children.messages",
