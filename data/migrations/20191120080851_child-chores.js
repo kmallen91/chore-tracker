@@ -11,7 +11,7 @@ exports.up = function(knex) {
     table
       .integer("chore_id")
       .unsigned()
-      .references("chore_id")
+      .references("id")
       .inTable("chores")
       .onDelete("CASCADE");
   });
