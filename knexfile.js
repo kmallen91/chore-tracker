@@ -29,11 +29,11 @@ module.exports = {
       max: 10
     },
     migrations: {
-      directory: "./data/testing/migrations",
+      directory: "./data/migrations",
       tableName: "testDB"
     },
     seeds: {
-      directory: "./testing/seeds"
+      directory: "./data/seeds"
     },
     pool: {
       afterCreate: (conn, done) => {
