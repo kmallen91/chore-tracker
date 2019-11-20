@@ -10,10 +10,10 @@ exports.up = function(knex) {
       .onUpdate("CASCADE")
       .onDelete("CASCADE");
     table
-      .integer("chore_id", 128)
+      .integer("chores", 128)
       .unsigned()
       .references("id")
-      .inTable("chores")
+      .inTable("child-chores")
       .onUpdate("CASCADE")
       .onDelete("CASCADE");
     table.string("child_username", 256).notNullable();
