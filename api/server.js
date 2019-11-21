@@ -2,9 +2,11 @@ const express = require("express");
 const helmet = require("helmet");
 const cors = require("cors");
 
+const validateUser = require("../middleware/validateUser");
+
 const userRouter = require("../users/userRouter");
-// const choresRouter = require("../chores/choresRouter.js");
-// const childrenRouter = require("../children/childrenRouter.js");
+const choresRouter = require("../chores/choresRouter.js");
+const childrenRouter = require("../children/childrenRouter.js");
 
 const server = express();
 
@@ -13,8 +15,8 @@ server.use(helmet());
 server.use(express.json());
 
 server.use("/users", userRouter);
-// server.use("api/chores", choresRouter);
-// server.use("api/children", childrenRouter);
+server.use("/chores", choresRouter);
+server.use("/children", validateUser, childrenRouter);
 
 server.get("/", (req, res) => {
   res.send("Server running");
