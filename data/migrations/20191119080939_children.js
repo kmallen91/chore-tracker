@@ -9,13 +9,7 @@ exports.up = function(knex) {
       .inTable("users")
       .onUpdate("CASCADE")
       .onDelete("CASCADE");
-    table
-      .integer("chore_id", 128)
-      .unsigned()
-      .references("id")
-      .inTable("chores")
-      .onUpdate("CASCADE")
-      .onDelete("CASCADE");
+    table.string("chores", 128);
     table.string("child_username", 256).notNullable();
     table.string("child_password", 256);
     table.string("messages", 1024);
