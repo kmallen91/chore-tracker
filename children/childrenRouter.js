@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const children = require("./childrenModel");
+const chores = require("../chores/choresModel");
 
 router.get("/", (req, res) => {
   children
