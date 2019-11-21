@@ -247,3 +247,84 @@ id and created_at are generated on post
 	deleted: 2
 }
 ```
+
+## /children/:id/chores Endpoints
+
+### /children/:id/chores GET Request
+
+#### Returns
+```
+{
+     "id": 1,
+    "name": "sweep",
+    "due_date": "2019-11-21",
+    "completed": false, 
+    "created_at": "2019-11-18 22:00:01"
+}
+```
+
+### /children/:id/chores POST Request
+
+#### Expects
+```
+{
+    "name": "sweep",
+    "due_date": "2019-11-21",
+    "completed": false,
+    "points": 10
+}
+```
+id and created_at are generated on post
+
+#### Returns
+```
+{
+  "chore": {
+    "id": 2,
+    "name": "mop",
+    "due_date": "2019-11-25",
+    "completed": 0,
+    "created_at": "2019-11-18 22:41:00"
+  }
+}
+```
+
+### /children/:id/chores PUT Request
+
+#### Expects
+```
+{      
+       "id": 2
+	"name":"sweep",
+	"due_date":"2019-11-28",
+	"completed":true,
+       "points": 10
+}
+```
+
+#### Returns
+```
+{
+  "updatedChore": {
+    "id": "1",
+    "name": "sweep",
+    "due_date": "2019-11-22",
+    "completed": true,
+    "points": 10
+  }
+  
+}
+```
+
+### /children/:id/chores/:id DELETE Request
+
+#### Returns
+```
+{      
+       "id": 2
+	"name":"sweep",
+	"due_date":"2019-11-28",
+	"completed":true,
+       "points": 10
+}
+```
