@@ -1,7 +1,6 @@
 exports.up = function(knex) {
   return knex.schema.createTable("child-chores", table => {
     table.increments();
-    table.unique(["child_id", "chore_id"]);
     table
       .integer("child_id")
       .unsigned()
