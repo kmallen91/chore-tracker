@@ -140,7 +140,7 @@ id and created_at are generated on post
   {
     "child_id": 3,
     "parent_id": 1,
-    "chore_id": 1,
+    "chores": "sweep, mop",
     "child_username": "testchild5",
     "child_password": null,
     "messages": "tester",
@@ -152,7 +152,7 @@ id and created_at are generated on post
   {
     "child_id": 2,
     "parent_id": 1,
-    "chore_id": 1,
+    "chores": "sweep, mop",
     "child_username": "Billy",
     "child_password": null,
     "messages": "keep up the good work",
@@ -164,7 +164,7 @@ id and created_at are generated on post
   {
     "child_id": 1,
     "parent_id": 1,
-    "chore_id": 1,
+    "chores": "sweep, mop",
     "child_username": "Joey",
     "child_password": null,
     "messages": "Do your chores!",
@@ -182,7 +182,7 @@ id and created_at are generated on post
 ```
 {
 	"parent_id": 1,
-	"chore_id":1,
+	"chores": "sweep, mop",
 	"child_username": "testchild5",
 	"messages": "tester",
 	"chore_score": 10,
@@ -198,7 +198,7 @@ id and created_at are generated on post
   {
     "child_id": 3,
     "parent_id": 1,
-    "chore_id": 1,
+    "chores": "sweep, mop",
     "child_username": "testchild5",
     "child_password": null,
     "messages": "tester",
@@ -216,7 +216,7 @@ id and created_at are generated on post
 ```
 {
 	"parent_id": 1,
-	"chore_id":1,
+	"chores": "sweep, mop",
 	"child_username": "testchild1",
 	"messages": "Do your chores!",
 	"chore_score": 20,
@@ -229,7 +229,7 @@ id and created_at are generated on post
 ```
 {
   "parent_id": 1,
-  "chore_id": 1,
+  "chores": "sweep, mop",
   "child_username": "testchild1",
   "messages": "Do your chores!",
   "chore_score": 20,
