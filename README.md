@@ -190,7 +190,7 @@ id and created_at are generated on post
 	"role":"child"
 }
 ```
-#### Note you cannot add a child with a parent_id or chore_id that do not exist
+#### Note you cannot add a child with a parent_id that does not exist
 
 #### Returns
 ```
