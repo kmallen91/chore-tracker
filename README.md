@@ -72,7 +72,7 @@
     "name": "sweep",
     "due_date": "2019-11-21",
     "completed": false,
-    "points": 10
+    "points": 9
 }
 ```
 id and created_at are generated on post
