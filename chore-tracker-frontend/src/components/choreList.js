@@ -19,7 +19,7 @@ const ChoreList = () => {
     <div className="cards">
       {chores.map(chore => (
         <ChoreCard
-          key={chore.chore_id}
+          key={chore.id}
           name={chore.name}
           due_date={chore.due_date}
           completed={chore.completed}
