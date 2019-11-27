@@ -21,7 +21,7 @@ const Login = props => {
       .post("/users/login", credentials)
       .then(res => {
         localStorage.setItem("token", res.data.token);
-        localStorage.setItem("user_id", res.data.user_id);
+        localStorage.setItem("user_id", res.data.userId);
         props.history.push("/");
       })
       .catch(err => {
@@ -44,7 +44,7 @@ const Login = props => {
         <h3 className="login-input-title">Password:</h3>
         <input
           className="login-input"
-          type="text"
+          type="password"
           name="password"
           value={credentials.password}
           onChange={handleChanges}

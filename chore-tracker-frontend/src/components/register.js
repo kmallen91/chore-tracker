@@ -44,7 +44,7 @@ const Register = props => {
         <h3 className="register-input-title">Password:</h3>
         <input
           className="register-input"
-          type="text"
+          type="password"
           name="password"
           value={credentials.password}
           onChange={handleChanges}

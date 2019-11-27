@@ -13,6 +13,7 @@ export default function Navbar(props) {
       <Link to="/"> Home </Link>
       <Link to="/register"> Register </Link>
       <Link to="/login"> Login </Link>
+      <Link to="/chores"> Chores </Link>
       <Link to="/" onClick={SignOut}>
         Sign Out
       </Link>
