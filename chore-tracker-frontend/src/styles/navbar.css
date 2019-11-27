@@ -1,0 +1,16 @@
+div.navbar {
+    display:flex;
+    justify-content: space-around;   
+    margin: 3vh;
+    margin-bottom: 10vh;
+
+}
+
+.navlink {
+    text-decoration: none;
+}
+
+.navlink:visited {
+    text-decoration: none;
+    color: black;
+}

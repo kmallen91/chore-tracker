@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar(props) {
   const SignOut = () => {
@@ -10,13 +10,13 @@ export default function Navbar(props) {
 
   return (
     <div className="navbar">
-      <Link to="/"> Home </Link>
-      <Link to="/register"> Register </Link>
-      <Link to="/login"> Login </Link>
-      <Link to="/chores"> Chores </Link>
-      <Link to="/" onClick={SignOut}>
+      <NavLink to="/" className='navlink'> Home </NavLink>
+      <NavLink to="/register" className='navlink'> Register </NavLink>
+      <NavLink to="/login" className='navlink'> Login </NavLink>
+      <NavLink to="/chores" className='navlink'> Chores </NavLink>
+      <NavLink to="/" className='navlink' onClick={SignOut}>
         Sign Out
-      </Link>
+      </NavLink>
     </div>
   );
 }

@@ -9,6 +9,9 @@ import Register from "./components/register";
 import Login from "./components/login";
 import ChoreList from "./components/choreList";
 
+//styles
+import './styles/navbar.css'
+
 function App() {
   return (
     <div className="App">
