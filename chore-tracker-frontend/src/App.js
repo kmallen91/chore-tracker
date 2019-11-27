@@ -11,6 +11,7 @@ import ChoreList from "./components/choreList";
 
 //styles
 import './styles/navbar.css'
+import './styles/choreCard.css'
 
 function App() {
   return (

@@ -1,0 +1,18 @@
+.cards {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.card-container {
+    outline: 2px solid black;
+    margin: 2vh;
+    : center;
+
+}
+
+.card-contents {
+display:flex;
+flex-wrap: wrap;
+padding: 1vh;
+
+}

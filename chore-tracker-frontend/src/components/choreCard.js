@@ -5,10 +5,10 @@ export default function ChoreCard(props) {
     <div className="card-container">
       <div className="card-contents">
         {props.id}
-        {props.name}
-        {props.due_date}
-        {props.completed}
-        {props.created_at}
+        Chore: {props.name} <br/>
+        Complete by: {props.due_date} <br/>
+        Completed? {props.completed} <br/>
+        
       </div>
     </div>
   );
