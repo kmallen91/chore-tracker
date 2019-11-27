@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import axiosWithAuth from '../utils/axiosWithAuth'
+import {useHistory} from 'react-router-dom'
 
-export default function AddChore(props) {
+const AddChore =() => {
     const [chore, setChore] = useState({
         name: '',
         due_date: '',
@@ -9,6 +10,7 @@ export default function AddChore(props) {
         points: ''
 
     })
+    const history = useHistory()
 
     const handleChanges = e => {
         setChore({
@@ -22,7 +24,7 @@ export default function AddChore(props) {
         axiosWithAuth()
             .post('/chores', chore)
             .then(res => {
-                props.history.push('/chores')
+                history.push('/chores')
             })
             .catch(err => console.log('error from chore POST', err))
     }
@@ -55,3 +57,5 @@ export default function AddChore(props) {
         </div>
     )
 }
+
+export default AddChore 

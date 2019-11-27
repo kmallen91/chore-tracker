@@ -18,7 +18,7 @@ const ChoreList = (props) => {
   }, []);
 
   const addChore = () => {
-    history.push('/addchore')
+    history.push('/addchores')
   }
 
   return (
