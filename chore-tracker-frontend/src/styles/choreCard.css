@@ -1,11 +1,12 @@
 .cards {
     display: flex;
-    flex-wrap:wrap;
     justify-content: center;
+    
 }
 .card-container {
     outline: 2px solid black;
     margin: 2vh;
+    
     
 }
 

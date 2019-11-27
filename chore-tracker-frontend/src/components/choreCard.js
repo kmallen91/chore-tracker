@@ -9,6 +9,7 @@ export default function ChoreCard(props) {
         Chore: {props.name} <br/>
         Complete by: {moment(props.due_date).format('MM/DD/YYYY')} <br/>
         Completed? {props.completed} <br/>
+        Points: {props.points}
         
       </div>
     </div>

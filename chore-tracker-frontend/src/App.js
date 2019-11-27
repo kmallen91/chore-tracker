@@ -8,6 +8,7 @@ import Navbar from "./components/navbar";
 import Register from "./components/register";
 import Login from "./components/login";
 import ChoreList from "./components/choreList";
+import AddChore from './components/addChore'
 
 //styles
 import './styles/navbar.css'
@@ -21,6 +22,7 @@ function App() {
       <Route path="/register" component={Register} />
       <Route path="/login" component={Login} />
       <Route path="/chores" component={ChoreList} />
+      <Route path="/addchores" component={AddChore} />
     </div>
   );
 }
