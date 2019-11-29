@@ -6,6 +6,7 @@ import {useHistory} from 'react-router-dom'
 const ChoreList = (props) => {
   const [chores, setChores] = useState([]);
   const history = useHistory()
+  const [isFetching, setFetching] = useState(false)
 
   useEffect(() => {
     axiosWithAuth()
@@ -15,7 +16,7 @@ const ChoreList = (props) => {
         setChores(res.data);
       })
       .catch(err => console.log("error from chores get", err));
-  }, []);
+  }, [isFetching]);
 
   const addChore = () => {
     history.push('/addchores')
@@ -32,6 +33,10 @@ const ChoreList = (props) => {
           due_date={chore.due_date}
           completed={chore.completed}
           points = {chore.points}
+          isFetching = {isFetching}
+          setFetching = {setFetching}
+          chore = {chore}
+          id = {chore.id}
         />
       ))}
     </div>
