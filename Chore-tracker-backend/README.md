@@ -84,7 +84,7 @@ id and created_at are generated on post
     "id": 2,
     "name": "mop",
     "due_date": "2019-11-25",
-    "completed": 0,
+    "completed": false,
     "created_at": "2019-11-18 22:41:00"
   }
 }
