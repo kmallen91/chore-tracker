@@ -144,7 +144,7 @@ id and created_at are generated on post
     "child_username": "testchild5",
     "child_password": null,
     "messages": "tester",
-    "chore_streak": 0,
+    "chore_streak": 2,
     "chore_score": 10,
     "bonus_points": null,
     "role": "child"
