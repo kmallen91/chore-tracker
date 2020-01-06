@@ -1,7 +1,7 @@
 # Chore Tracker BackEnd
 ## [https://chore-tracker-bw.herokuapp.com/](https://chore-tracker-bw.herokuapp.com/)
 
-## For CORS Errors use
+## For CORS Errors Use
 ## [https://cors-anywhere.herokuapp.com/https://chore-tracker-bw.herokuapp.com/](https://cors-anywhere.herokuapp.com/https://chore-tracker-bw.herokuapp.com/)
 
 # Endpoints
