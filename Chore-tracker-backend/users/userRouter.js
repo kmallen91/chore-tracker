@@ -6,7 +6,6 @@ const secret = require("../config/secret");
 const validate = require("../middleware/checkUser");
 
 const users = require("../users/userModel");
-// const validateUser = require("../middleware/validateUser");
 
 router.post("/register", validate.checkUser, (req, res) => {
   const user = req.body;
