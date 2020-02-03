@@ -13,7 +13,7 @@
 ```
 {
        "username": "User1",
-       "password": "password123",
+       "password": "password234",
        "first_name": "John", (can be null)
        "last_name": "Doe", (can be null)
        "email": "johndoe@email.com",(can be null)
