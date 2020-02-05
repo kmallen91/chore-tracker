@@ -43,7 +43,7 @@
 #### Returns
 ```
 {
-    "userId": "1",
+    "userId": "2",
     "username": "User1",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6InRlc3Q1IiwiaWF0IjoxNTc0MTA2MzE3LCJleHAiOjE1NzQxOTI3MTd9.eSFR6qhfnC8JstvFxo6PmDTZLke_uQHlu6LKEOAePeo"
  }
