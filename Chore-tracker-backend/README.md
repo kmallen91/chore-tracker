@@ -21,7 +21,6 @@
        "role": "parent" (can be null)
 }
 ```
-
 #### Returns
 ```
 {
