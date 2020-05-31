@@ -327,4 +327,3 @@ id and created_at are generated on post
        "points": 10
 }
 ```
-
